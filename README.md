@@ -27,5 +27,3 @@ This project combines facial emotion detection and music recommendation to provi
 - Add continuous emotion tracking.
 - Expand playlist mapping for nuanced recommendations.
 - Deploy as a web application.
-
-https://drive.google.com/drive/folders/1lvAYBLcsVehisuecNmENKVmISBkPoQyL?usp=sharing
