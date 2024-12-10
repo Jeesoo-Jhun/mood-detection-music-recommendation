@@ -3,6 +3,10 @@
 ## Overview
 This project combines facial emotion detection and music recommendation to provide a personalized experience. Using an image input, the system analyzes facial expressions to detect emotions and recommends songs or playlists through Spotify API based on the detected mood.
 
+## Dataset
+
+* [Dataset Link](https://drive.google.com/drive/folders/1lvAYBLcsVehisuecNmENKVmISBkPoQyL?usp=sharing)
+
 ## Key Features
 - Real-time facial emotion detection using pre-trained models (FER-2013).
 - Dynamic playlist recommendations mapped to detected emotions.
@@ -23,3 +27,5 @@ This project combines facial emotion detection and music recommendation to provi
 - Add continuous emotion tracking.
 - Expand playlist mapping for nuanced recommendations.
 - Deploy as a web application.
+
+https://drive.google.com/drive/folders/1lvAYBLcsVehisuecNmENKVmISBkPoQyL?usp=sharing
