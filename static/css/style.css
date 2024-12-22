@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: gray;
+}
+
+section {
+    margin: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+.steps .step {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
