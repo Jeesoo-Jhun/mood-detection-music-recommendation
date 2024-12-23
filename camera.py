@@ -3,9 +3,30 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dropout, Flatten, Dense, Input
+import requests
 
 # Base directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Function to download the model from Google Drive
+def download_model():
+    model_url = "https://drive.google.com/file/d/18QVC9UEbDzwrPHszFCx_AxVZlk0UTExP/view?usp=sharing"  # Google Drive file ID
+    model_path = os.path.join(BASE_DIR, 'model.h5')
+    
+    if not os.path.exists(model_path):
+        print("Downloading model.h5 from Google Drive...")
+        response = requests.get(model_url, stream=True)
+        if response.status_code == 200:
+            with open(model_path, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            print("Model downloaded successfully.")
+        else:
+            print(f"Failed to download model. Status code: {response.status_code}")
+            exit(1)
+
+# Ensure the model is downloaded before loading
+download_model()
 
 # Define and load the emotion detection model
 emotion_model = Sequential([
