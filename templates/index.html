@@ -9,7 +9,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #eef2f7;
             font-family: 'Arial', sans-serif;
         }
         .header {
@@ -28,6 +28,13 @@
         }
         .video-feed {
             text-align: center;
+            margin-bottom: 20px;
+        }
+        .video-feed img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
         }
         .song-table {
             margin-top: 20px;
@@ -44,6 +51,9 @@
             bottom: 0;
             width: 100%;
         }
+        h2 {
+            color: #0d6efd;
+        }
     </style>
 </head>
 <body>
@@ -52,18 +62,19 @@
     </div>
 
     <div class="main-container">
-        <h2 class="text-center text-primary">Emotion Detector</h2>
+        <h2 class="text-center">Emotion Detector</h2>
         <div class="video-feed">
-            <img src="{{ url_for('video_feed') }}" class="img-fluid rounded" style="max-width: 100%; height: auto;" />
+            <!-- Displaying live video feed -->
+            <img src="{{ url_for('video_feed') }}" alt="Live Emotion Feed" class="img-fluid rounded">
         </div>
 
-        <h2 class="text-center text-primary mt-4">Recommended Songs</h2>
+        <h2 class="text-center mt-4">Recommended Songs</h2>
         <div class="song-table">
-            <table class="table table-striped table-hover">
+            <table class="table table-bordered table-hover">
                 <thead class="table-dark">
                     <tr>
                         {% for heading in headings %}
-                            <th>{{ heading }}</th>
+                            <th class="text-center">{{ heading }}</th>
                         {% endfor %}
                     </tr>
                 </thead>
@@ -81,11 +92,11 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Emotion Music Recommender. All rights reserved.</p>
+        <p>&copy; 2024 Emotion Music Recommender. Created with ❤️ for Emotion Recognition and Music Recommendation.</p>
     </div>
 
     <script>
-        // Automatically refresh the page every 5 seconds to fetch new data
+        // Automatically refresh the page every 5 seconds to fetch updated data
         setInterval(function () {
             location.reload();
         }, 5000);
