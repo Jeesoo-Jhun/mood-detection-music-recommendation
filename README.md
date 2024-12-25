@@ -1,11 +1,8 @@
-
-![Demo](https://drive.google.com/uc?id=1vWuTg1fd3OYwIeL7GNhnP8h_GE4TID2V)
-
 # Emotion-Based Music Recommendation System
 
 This project is an **Emotion-Based Music Recommendation System** that uses real-time webcam-based emotion detection to recommend songs that match the user's mood. It integrates a machine learning model for facial expression recognition with the Spotify API to dynamically fetch mood-specific playlists. The web application is developed using Flask.
 
-![Emotion Detection Interface](https://cdn.smclk.net/img/Emotion-Detection.png)
+![Demo](https://drive.google.com/uc?id=1vWuTg1fd3OYwIeL7GNhnP8h_GE4TID2V)
 
 ## Dataset
 
